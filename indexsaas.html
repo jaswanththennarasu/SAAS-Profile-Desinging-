@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<!--
+  Project Title : Netflix-Style SaaS Homepage
+  Student Level : 2nd Year B.Tech / B.Sc IT
+  Purpose       : UI/UX + HTML/CSS Design (100 Marks)
+  Platform Idea : Online Streaming SaaS (Netflix inspired – EDUCATIONAL)
+
+  Note:
+  - Built using ONLY HTML + CSS
+  - Simple, clean, exam‑friendly
+  - No frameworks, no JS (safe for lab exams)
+  - Easy to explain in viva
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix – Watch Anywhere</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== GLOBAL STYLES ===== */
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    body{
+      font-family:'Roboto', sans-serif;
+      background:#000;
+      color:#fff;
+    }
+
+    a{text-decoration:none;color:#fff}
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    /* ===== HEADER ===== */
+    header{
+      position:absolute;
+      width:100%;
+      top:0;
+      left:0;
+      z-index:10;
+    }
+
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 0;
+    }
+
+    .logo{
+      font-size:32px;
+      font-weight:900;
+      color:#e50914;
+    }
+
+    .sign-in{
+      padding:8px 18px;
+      background:#e50914;
+      border-radius:4px;
+      font-weight:700;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero{
+      height:100vh;
+      background:
+        linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.2)),
+        url('https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?auto=format&fit=crop&w=1500&q=80');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      align-items:center;
+    }
+
+    .hero-content{
+      max-width:600px;
+    }
+
+    .hero h1{
+      font-size:52px;
+      font-weight:900;
+      margin-bottom:16px;
+    }
+
+    .hero h2{
+      font-size:26px;
+      font-weight:400;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:18px;
+      margin-bottom:24px;
+    }
+
+    .cta{
+      display:inline-block;
+      padding:14px 30px;
+      background:#e50914;
+      font-size:20px;
+      font-weight:700;
+      border-radius:4px;
+    }
+
+    /* ===== FEATURES ===== */
+    .features{
+      padding:80px 0;
+    }
+
+    .feature{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      align-items:center;
+      gap:40px;
+      margin-bottom:80px;
+    }
+
+    .feature h3{
+      font-size:36px;
+      margin-bottom:16px;
+    }
+
+    .feature p{
+      font-size:18px;
+      color:#ccc;
+    }
+
+    .feature img{
+      width:100%;
+      border-radius:8px;
+    }
+
+    /* ===== PRICING ===== */
+    .pricing{
+      background:#111;
+      padding:80px 0;
+      text-align:center;
+    }
+
+    .pricing h2{
+      font-size:40px;
+      margin-bottom:40px;
+    }
+
+    .plans{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:30px;
+    }
+
+    .plan{
+      background:#000;
+      padding:30px;
+      border:1px solid #333;
+      border-radius:8px;
+    }
+
+    .plan h3{
+      font-size:26px;
+      margin-bottom:10px;
+      color:#e50914;
+    }
+
+    .price{
+      font-size:32px;
+      font-weight:700;
+      margin:16px 0;
+    }
+
+    .plan p{
+      color:#bbb;
+      margin-bottom:20px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer{
+      padding:40px 0;
+      background:#000;
+      color:#777;
+      font-size:14px;
+    }
+
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:900px){
+      .hero h1{font-size:36px}
+      .feature{grid-template-columns:1fr}
+      .plans{grid-template-columns:1fr}
+      .footer-grid{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="container nav">
+    <div class="logo">Netflix</div>
+    <a href="#" class="sign-in">Sign In</a>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content">
+    <h1>Unlimited movies, TV shows and more</h1>
+    <h2>Watch anywhere. Cancel anytime.</h2>
+    <p>Ready to watch? Enter your email to create or restart your membership.</p>
+    <a href="#" class="cta">Get Started</a>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features container">
+
+  <div class="feature">
+    <div>
+      <h3>Enjoy on your TV</h3>
+      <p>Watch on Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu‑ray players and more.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1587825140708-dfaf72ae4b04?auto=format&fit=crop&w=800&q=80" alt="TV Streaming">
+  </div>
+
+  <div class="feature">
+    <img src="https://images.unsplash.com/photo-1517602302552-471fe67acf66?auto=format&fit=crop&w=800&q=80" alt="Mobile Streaming">
+    <div>
+      <h3>Download your shows</h3>
+      <p>Save your favourites easily and always have something to watch.</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- PRICING -->
+<section class="pricing">
+  <div class="container">
+    <h2>Choose your plan</h2>
+    <div class="plans">
+      <div class="plan">
+        <h3>Basic</h3>
+        <div class="price">₹199</div>
+        <p>Good video quality</p>
+      </div>
+      <div class="plan">
+        <h3>Standard</h3>
+        <div class="price">₹499</div>
+        <p>Better video quality (HD)</p>
+      </div>
+      <div class="plan">
+        <h3>Premium</h3>
+        <div class="price">₹799</div>
+        <p>Best video quality (4K)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container footer-grid">
+    <div>FAQ</div>
+    <div>Help Centre</div>
+    <div>Terms of Use</div>
+    <div>Privacy</div>
+  </div>
+  <div class="container" style="margin-top:20px">
+    © 2025 Netflix – Student Mini Project
+  </div>
+</footer>
+
+</body>
+</html>
